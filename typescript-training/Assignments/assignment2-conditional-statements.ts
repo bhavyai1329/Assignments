@@ -33,7 +33,7 @@ else if(creditScore <= 750 && creditScore >= 650){
     //Verifying if income is above $50000//
     if(income >= 50000){
 
-       // Verifying if employed or not//
+        // Verifying if employed or not//
         if(isEmployed){
 
             //Verifying if debt to income ratio is below 40 or not//
