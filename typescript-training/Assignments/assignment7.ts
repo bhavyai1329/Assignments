@@ -13,7 +13,7 @@ words.reverse();
 
 let capitalizedSentence : string = "";
 for(let i: number = 0; i < words.length; i++){
-    let eachword : string = words[i];
+    let eachword : string = words[i]!;
     let firstCharacter : string = eachword.charAt(0).toUpperCase();
     let capital : string = firstCharacter.toUpperCase();
     let rest : string = eachword.slice(1);
