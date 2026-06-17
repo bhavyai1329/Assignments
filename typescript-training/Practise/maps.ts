@@ -1,4 +1,4 @@
-/* console.log(`Maintain two Maps:
+console.log(`Maintain two Maps:
 Map<string, number> → product name → quantity
 Map<string, number> → product name → price
 
@@ -50,4 +50,3 @@ function calculateBill (price : Map<string, number>, quantity: Map<string, numbe
  calculateBill(productQuantity, productPrice);
 
  console.log("----------------------------------------------------------------------------------------------------------------" + "\n");
-*/
