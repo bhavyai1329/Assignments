@@ -25,7 +25,46 @@ function dailyQuote() : void{
 
 dailyQuote();
 
-console.log("-----Function With Parameters & Without Return-----"+"\n");
+console.log("Create a function that logs the multiplication table of 5 using a loop.");
+
+function mulTable() : void {
+    let n = 10;
+    for(let i : number = 1; i <= n; i++){
+        let product = 5 * i;
+        console.log(`5 x ${i} = ${product}`);
+    }
+}
+mulTable();
+console.log();
+
+console.log("Write a function that prints all prime numbers between 1 and 50.");
+
+function onlyPrimes() : void {
+    let primes : number [] = [];
+
+    for(let i = 2; i < 50; i++) {
+        let isPrime = true;
+
+        for(let j = 2; j <= Math.sqrt(i); j++){
+            if(i%j === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if(isPrime) {
+            primes.push(i);
+        }
+    }
+
+    console.log(primes);
+}
+
+onlyPrimes();
+
+console.log("Build a function that logs the Fibonacci sequence up to 10 terms.");
+
+/* console.log("-----Function With Parameters & Without Return-----"+"\n");
 
 console.log("Write a function that accepts a string name and prints 'Welcome, <name>.'");
 
@@ -132,8 +171,103 @@ function onlyEvens(a : number []) : number [] {
 console.log(onlyEvens([23, 33, 34, 46, 92, 100]) + "\n");
 
 console.log("-----Function With Optional Parameters-----"+"\n");
+
 console.log("Write a function that accepts a name and an optional age. If age is provided, print 'Name: X, Age: Y', else just 'Name: X'.");
+
+function personDetails(name : string, age? : number) : any {
+    if(age !== undefined){
+        console.log(`Name : ${name}, Age: ${age}` + "\n");
+    }
+    else{
+        console.log(`Name : ${name}` + "\n");
+    }
+    return;
+}
+
+personDetails("Niru");
 
 console.log("Create a function that takes a string message and an optional boolean flag to log it in uppercase.");
 
+function logMessage(input : string, toUpperCase? : boolean) : string {
+    if(toUpperCase !== undefined) {
+        if(toUpperCase) {
+            const b = input.toUpperCase();
+            console.log(b + "\n");
+            return b;
+        }
+        else {
+            const b = input
+            console.log(b + "\n");
+            return b;
+        }
+    }
+    else{
+        const c = input
+        console.log(c);
+        return c;
+    }
+}
+
+logMessage("nandan", false);
+
+function logMessage1(input : string, toUpperCase? : boolean) : string {
+    const output = toUpperCase ? input.toUpperCase() : input ;
+    console.log(output + "\n");
+    return output;
+}
+logMessage1("rajesh");
+
 console.log("Build a function that accepts a number and an optional multiplier. If not provided, default multiplier is 1. Return the product.");
+
+function optionalMultiplier(input : number, multiplier : number = 1) : number {
+    return input * multiplier;
+}
+console.log(optionalMultiplier(420, 425));
+
+console.log("-----Function With Rest Parameters-----"+"\n");
+
+console.log("Write a function that accepts any number of numbers and returns their sum.");
+
+function sumOf(...nums : number []) : number {
+    let sum : number = 0;
+
+    for(let n of nums) {
+        sum = sum + n;
+    }
+
+    return sum;
+}
+console.log(sumOf(2,45,3,43,56) + "\n");
+
+
+console.log("Create a function that takes a string prefix and multiple string words, then concatenates them with the prefix.");
+
+function stringConcate(prefix : string, ...words : string []) : string {
+    let output : string = "";
+    for(let n of words) {
+        output += `${prefix}${n} `;
+    }
+    return output.trim();
+}
+console.log(stringConcate("Mr." , "Rajesh", "Sujith") + "\n");
+
+function stringConcate1(prefix: string, ...words: string[]): string {
+    // Map each word with the prefix, then join them with spaces
+    const output = words.map(word => `${prefix}${word}`).join(" ");
+    return output;
+}
+console.log(stringConcate1("Mr." , "Rajesh", "Sujith") + "\n");
+
+console.log("Build a function that accepts multiple boolean values and returns how many are true.");
+
+function returnTotalBooleans(...values : boolean []) : number {
+    let totalTrue : number = 0;
+
+    for(let n of values){
+        if(n) {
+            totalTrue++;
+        }
+    }
+    return totalTrue;
+}
+console.log(returnTotalBooleans(true, false, true, true, false) + "\n"); */

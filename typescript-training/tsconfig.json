@@ -3,6 +3,7 @@
   "compilerOptions": {
     "noEmit": true,
     "allowImportingTsExtensions": true,
+    "types":["jquery","node"],
     // File Layout
     // "rootDir": "./src",
     // "outDir": "./dist",
@@ -11,7 +12,6 @@
     // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
     "target": "esnext",
-    "types": ["jquery"],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
