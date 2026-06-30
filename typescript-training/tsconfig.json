@@ -3,7 +3,7 @@
   "compilerOptions": {
     "noEmit": true,
     "allowImportingTsExtensions": true,
-    "types":["jquery","node"],
+    "types":["jquery","node","playwright"],
     // File Layout
     // "rootDir": "./src",
     // "outDir": "./dist",
